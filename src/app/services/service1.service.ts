@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class Service1Service {
 
-  url: string = 'assets/ramschema_ht23.json';
+  url: string = 'https://webbutveckling.miun.se/files/ramschema_ht23.json';
 
   constructor(private http: HttpClient) {}
 
