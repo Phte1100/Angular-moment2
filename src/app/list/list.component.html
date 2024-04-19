@@ -1,0 +1,26 @@
+<main>
+<div id="input">
+    <label for="filter">Filtrera lista: </label>
+    <input type="text" id="filter" [(ngModel)]="filteredValue" (input)="applyFilter()">
+</div>
+@if(filteredCourses.length === 0) {
+    <p>Inga kurser...</p>
+}
+
+<div id="table">
+<table>
+    <tr>
+      <th (click)="sortCourses('coursename')">Kursnamn</th>
+      <th (click)="sortCourses('code')">Kurskod</th>
+      <th (click)="sortCourses('progression')">Progression</th>
+      <th>Hemsida</th>
+    </tr>
+    <tr *ngFor="let course of filteredCourses">
+    <td>{{ course.coursename }}</td>
+    <td>{{ course.code }}</td>
+    <td>{{ course.progression }}</td>
+    <td><a href="{{ course.syllabus }}">länk till kursen</a></td>
+    </tr>
+</table>
+</div>
+</main>
