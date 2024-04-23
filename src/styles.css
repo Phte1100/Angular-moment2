@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    background-color: #E4F1EE;
+    color: black;
+}
+
+a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    font-family: "roboto";
+}
+
+
